@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= render 'follow_form' %>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -9,6 +9,23 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<div class="col-md-8">
+  <% if @microposts.any? %>
+  <h3>Microposts (<%= @microposts.count %>)</h3>
+  <ol class="microposts">
+    <% @microposts.each do |micropost| %>
+    <li id="micropost-<%= micropost.id %>">
+      <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+      <span class="content"><%= micropost.content %></span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+      </span>
+    </li>
+    <% end %>
+  </ol>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
