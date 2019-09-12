@@ -30,8 +30,10 @@ gem 'bootstrap-sass'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
+
+gem 'faker'
+
 group :development, :test do
-  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
