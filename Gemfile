@@ -29,7 +29,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap-sass'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'carrierwave', '1.2.2'
-gem 'mini_magick', '4.7.0'
+gem 'mini_magick', '4.9.4'
 
 gem 'faker'
 
